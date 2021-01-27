@@ -17,7 +17,8 @@ public class AlumnResource {
     public AlumnResource(AlumnService alumnService){
         this.alumnService = alumnService;
     }
-    @GetMapping("/subjects/{idAlumn}")
+
+    @GetMapping("/alumn/{idAlumn}")
     public ResponseEntity<Optional<Alumn>> findById(@PathVariable("idAlumn")int idAlumn){
         return ResponseEntity.ok(this.alumnService.findById(idAlumn));
     }
