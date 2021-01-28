@@ -1,6 +1,4 @@
-//const baseURL = "http://localhost:8080/alumn/";
-const baseURL = "https://pokeapi.co/api/v2/pokemon/";
-
+const baseURL = "http://localhost:8080/alumn/";
 const handleError = err =>{
     console.log(`Hubo un error. ${err}`);
 };
@@ -20,7 +18,6 @@ const getUser = async (id) =>{
     try {
         console.log(`Buscar usuario...`);
         user = await axios.get(`${baseURL}${id}`);
-
         console.log(`Ususario encontrado`);
         console.log(user);
 
